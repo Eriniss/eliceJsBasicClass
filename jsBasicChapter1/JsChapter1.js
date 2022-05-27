@@ -132,3 +132,42 @@ document.write(arrTest[1][2]);  // 3000 출력
 // document.write[1] 입력 시 [1000, 2000, 3000]이 출력된다
 // 여기서 다시한번 []을 지정해 주어 document.write[1][2] 를 입력하게 되면 [1000, 2000, 3000]중 [2]인 3000이 최종적으로 출력된다
 
+// * 변수 생성
+var coffee = "americano";
+var cup = "tea";
+
+document.write(coffee);
+document.write(cup);
+
+cup = "cappuccino" // 변수에 할당된 값 변경
+
+document.write(cup);
+
+// 변수내의 지정된 값을 수정하고 싶다면 지정한 변수 이름을 불러 = 을 사용하여 할당해주면 된다
+
+// * 데이터 타입 - 배열
+var coffee = ["Caffe Latte", "Cappuccino"];
+
+document.write(coffee);
+document.write(coffee[0]);
+
+coffee.shift();
+coffee.unshift("Caffe macchiato");
+
+document.write(coffee);
+
+// push 는 배열 맨뒤 추가, unshift 는 배열 맨앞 추가, shift 는 배열 맨앞 삭제, pop 은 배열 맨 뒤 삭제
+
+// * 프로퍼티와 메서드 - 문자열
+var elice = "Elice Coderland";
+
+document.write(elice.length); // linght는 뒤에 ()를 붙이지 않는다
+document.write(elice.charAt(5)); // 문자열의 데이터를 확인할때는 []이 아닌 ()을 사용한다. 헷갈리니 주의!
+document.write(elice.split(" ")); // 문자열을 " " 기준으로 나누어 배열로 할당한다
+
+// * 프로퍼티와 메서드 - Math
+document.write(Math.abs(-7)); // 절대값
+document.write(Math.ceil(0.45)); // 올림값
+document.write(Math.floor(8.98)); // 내림값
+document.write(Math.random()); // 0과 1사이의 무작위 소수값
+
