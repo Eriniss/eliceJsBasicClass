@@ -9,7 +9,7 @@ var redfruit="apple";
 // 2. 변수명은 최대한 자세하고 명확하게
 
 // * 총 8가지의 데이터타입
-// 1. 문자열(string), 2. 숫자(number), 3. 함수(function), 4. 배열(array), 5. 객체(object), 6. null 7.undefined, 8. boolean(불린)
+// 1. 문자열(string), 2. 숫자(number), 3. 함수(function), 4. 배열(array), 5. 객체(object), 6. null 7.undefined, 8. 불린(boolean)
 
 // 1. string
 var string = "문자열";
