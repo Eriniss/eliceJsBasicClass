@@ -9,7 +9,7 @@ var redfruit="apple";
 // 2. 변수명은 최대한 자세하고 명확하게
 
 // * 총 8가지의 데이터타입
-// 1. 문자열(string) 2. 숫자(number) 3. 함수(function) 4. 
+// 1. 문자열(string), 2. 숫자(number), 3. 함수(function), 4. 배열(array), 5. 객체(object), 6. null 7.undefined, 8. boolean(불린)
 
 // 1. string
 var string = "문자열";
@@ -71,7 +71,7 @@ console.log(student.name);
 
 // student 객체에서 name 프로퍼티를 가져왔으므로 "inkwon" 이라는 이름을 "Park"로 덮어씌우게 된다
 
-// 6. undefined와 null
+// 6 & 7. undefined와 null
 var unde;
 var empty = null;
 
