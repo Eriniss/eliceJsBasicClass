@@ -78,8 +78,57 @@ var empty = null;
 // undefined 는 변수 안에 데이터를 입력하지 않은 상태이다
 // null 은 변수 안에 임의로 빈 데이터를 지정 한것이다
 
-// * boolean
+// 7. boolean
 var t = true;
 var f = false;
 
 // 데이터 값에 true 또는 false 값이 입력한 것이다
+
+// * 프로퍼티와 메서드
+var str1 = "Hello World";
+
+str1.length; // 문자열 길이, 11 출력
+str1.charAt(0); // 문자열 선택, 0 출력
+str1.split(" "); // 나눈후 배열로 할당, 공백(" ")을 기준으로 문자 나눈 후 배열[Hello, World]로 출력
+
+var fruit = ["apple", "pear", "grape"]
+
+fruit.length; // 데이터의 개수, 3 출력
+
+fruit.push("strawberry") // 배열 뒤에 데이터 삽입, ["strawbetty", "apple", "pear", "grape"]
+fruit.unshift("lemon") // 배열 앞에 데이터 삽입, ["strawbetty", "apple", "pear", "grape", "lemon"]
+
+fruit.pop(); // 배열 뒤의 데이터 제거, "lemon" 을 제거하므로 ["strawbetty", "apple", "pear", "grape"]
+fruit.shift(); // 배열 앞의 데이터 제거, "strawberry" 를 제거하므로 ["apple", "pear", "grape"]
+
+// *  math의 수학 연산 메서드
+Math.abs(-3); // 절대값
+Math.ceil(0.3); // 올림
+Math.floor(10.9); // 내림
+Math.random() // 임의의 숫자 출력
+
+parseInt("20.6"); // 정수 형태로 변환, 20 출력
+parseFloat("20.6"); // 실수 형태로 변환, 20.6 출력
+
+// * 문제
+// * 삼각형의 넓이를 구하는 함수를 완성시켜 보세요.
+function triangle(width, height) {
+  return width * height / 2
+}
+
+document.write(triangle(5, 7));
+
+// triangle 함수 안에 매개변수를 가로, 세로로 각각 할당해준 후 이 둘을 곱하여 2로 나눈 값을 리턴하였다
+
+// * 배열 안의 데이터에 접근하는 방법을 응응하여, 다음 배열에서 숫자 3000에 접근해 보세요
+var arrTest = [
+  [100, 200, 300],
+  [1000, 2000, 3000],
+  [1111, 2222, 3333]
+];
+
+document.write(arrTest[1][2]);  // 3000 출력
+
+// document.write[1] 입력 시 [1000, 2000, 3000]이 출력된다
+// 여기서 다시한번 []을 지정해 주어 document.write[1][2] 를 입력하게 되면 [1000, 2000, 3000]중 [2]인 3000이 최종적으로 출력된다
+
