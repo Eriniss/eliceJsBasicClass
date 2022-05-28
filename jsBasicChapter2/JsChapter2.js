@@ -128,3 +128,62 @@ do {
 // do while 문의 경우 while 의 조건과 관계 없이, do 의 명령을 무조건 실행부터 한다
 // 즉, 조건에 관계없이 무조건 한번은 실행시킨다
 // 이에 따라 최종적으로 console.log(12) 을 실행하게 된다
+
+
+// * 주사위 만들기
+
+function dice () {
+  return Math.floor(Math.random() * 6) + 1;
+}
+
+document.write(dice());
+
+// 주사위의 경우 1 부터 6 까지 무작위의 숫자가 나온다
+// 이러한 특성을 이용해서 0 부터 1 사이의 무작위 소수가 나오는 .random 프로퍼티를 사용한다
+// .random 프로퍼티에 6을 곱해주면 0 <= x <= 5.9999...(x < 6) 까지의 숫자가 할당된다 (x 는 주사위가 나올 수 있는 수)
+// 즉, 여기에 .floor 프로퍼티를 할당해 내림을 하여 소수점 부분을 버리면 0 <= x <= 5가 되며 여기에 x = x + 1 을 해주면 최종적으로 1 <= x <= 6이 되어 주사위가 완성된다
+
+function isPrime(n) {
+  var divisor = 2;
+  if (n === 1) {
+      return false;
+  } else 
+  while (n > divisor) {
+      if (n % divisor === 0) {
+          return false;
+      } else {
+          divisor++;
+      }
+  }
+  return true;
+}
+
+// 복잡한 함수식을 풀이할땐 위에서 부터 천천히 순서를 매기며 연산을 해보는 것이 좋다
+// 만약 var n = 7; 이라고 가정하겠다
+// 첫번째로 n은 if 문과 마주하게 된다. 여기서 7 === 1 의 값은 false 이므로 else 부분으로 넘어가게 된다
+// 두번째의 if 문에 7을 대입하게 되면 7 % 2 === 0 이며 이에 대한 값은 false 이다. 즉, 두번째 else 문으로 넘어가게 되며 2++의 값을 할당받는다
+// 반복문을 거치면 7 % 3 === 0 도 true 이므로 7 % 4 === 0 true ... 이런식으로 반복하다 보면 7 % 6 === 0 에서 멈추게 되며 이는 true 이므로 최종적으로 return true; 가 출력되게 된다
+// 여기서 var n = 6 이라고 가정한다면 6 % 2 === 0 은 true 이므로 곧바로 return false 가 출력되고 return 문에 의해 함수가 종료된다
+
+
+// * 문자 거꾸로 출력하기
+
+function reverse(str){
+
+  var reverStr = "";
+  
+for (var i = str.length - 1; i >= 0; i--) {
+  reverStr = reverStr + str.charAt(i);
+}
+
+  return reverStr;
+}
+
+// reverStr 을 "" 로 할당하였다
+// for 반복문에서 초기 변수를 str.length - 1 로 둔다. 이유는 n 이 "optical" 이라고 가정했을 때 length는 7 이, 데이터는 0, 1, 2, 3, 4, 5, 6 과 같이 0부터 시작하기 때문이다
+// str.charAt(i) 를 통해 문자 열에 있는 각각의 알파벳을 불러온다. "optical" 의 str.length는 7이므로 초기변수 값은 7 - 1 인 6이므로 str.charAt(6) 인 "l" 이 호출된다
+// 이렇게 호출된 값은 reverStr = reverStr + "l" 에 의해 reverStr 값에 저장된다
+// 저장된 reverStr 값은 반복문을 거쳐 저장되며 최종적으로 "lacitpo" 이 출력된다
+
+
+// * 23장, 24장은 추후에 풀이
