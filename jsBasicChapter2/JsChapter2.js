@@ -59,10 +59,33 @@ if (a < b) {
 // a < b 가 true 라면 console.log("a 는 b 보다 작다") 가 실행된다
 // 만약 a < b 가 false 라면 console.log("a 는 b 보다 같거나 크다") 가 실행된다
 
+
 var a = 20;
 var b = 40;
 var c = 60;
 
-if (a > b) { console.log("a 는 b 보다 크다")
-} else if (b > c) { console.log
+if (a > b) { console.log("a 는 b 보다 크다") // f
+} else if (b > c) { console.log("b 는 c 보다 크다") // f
+} else if (a < c) { console.log("a 는 c 보다 작다") // t
+} else if (b < c) { console.log("b 는 c 보다 작다") // t
+} else { console.log("모든 조건을 만족하지 않는다")
 }
+
+// 이런식으로 else 와 if 를 붙여서 사용할 수도 있다
+// 주의점으로 if 문에서 만약 true의 조건이 충족되어 함수가 실행되었다면 return 과 같이 함수를 종료해버린다
+// 즉 위의 식은 else if (a < c) { console.log("a 는 c 보다 작다")} 가 출력되며 밑의 함수문은 생략된 채로 종료된다
+
+const a = 20;
+const b = 40;
+
+if (a !== b) { 
+    if (a > b) { document.write("a > b")
+    } else { document.write("a < b")
+    }
+} else { document.write("a === b")
+}
+
+// 이와 같이 if문 안에 if문 을 넣어 줄 수 있다. 이럴땐 가장 위에있는 if문 부터 차례로 풀어주면 된다
+// 20 !== 40 이므로 true 가 출력되어 if문 안의 함수식이 실행된다. 이때 20 > 40의 값이 false 값이므로 최종적으로 else { document.write("a < b")} 가 출력되게 된다
+// !=== 와 같은 문법은 없다
+
