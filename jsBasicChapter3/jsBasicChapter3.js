@@ -57,3 +57,13 @@ const str = document.getElementById("apple");
 // apple 아이디에 적힌 "apple" 텍스트를 "요소의 내용을 변경합니다" 로 변경한다
 str.innerHTML = "요소의 내용을 변경합니다"
 
+// * 노드의 값
+
+// HTML 문서의 모든 자식 노드 중에서 첫 번째 노드의 이름을 선택
+document.childNodes[0].nodeName;
+
+// 아이디가 "heading"인 요소의 첫 번째 자식 노드의 노드값을 선택
+document.getElementById("heading").firstChild.nodeValue;
+
+// 아이디가 "heading"인 요소의 첫 번째 자식 노드의 타입을 선택
+document.getElementById("heading").firstChild.nodeType;
