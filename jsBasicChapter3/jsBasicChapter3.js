@@ -67,3 +67,4 @@ document.getElementById("heading").firstChild.nodeValue;
 
 // 아이디가 "heading"인 요소의 첫 번째 자식 노드의 타입을 선택
 document.getElementById("heading").firstChild.nodeType;
+
